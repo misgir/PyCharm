@@ -1,17 +1,14 @@
-def month_to_season(n):
-    if  12 <= n <= 2:
-        return "Зима"
-    elif 3 <= n <= 5:
-        return "Весна"
-    elif 6 <= n <= 8:
-        return "Лето"
-    elif 9 <= n <= 11:
-        return "Осень"
-    else:
-        return "Неверный номер месяца"
-
+def month_to_season(n_month):
+    if n_month in (12, 1, 2):
+        print("Зима")
+    elif n_month in (3, 4, 5):
+        print("Весна")
+    elif n_month in(6,7,8):
+        print("Лето")
+    elif n_month in (9,10,11):
+        print("Осень")
 try:
-    n = int(input("Номер месяца (1-12): "))
-    print(month_to_season(n))
+    n_montn = int(input("Номер месяца (1-12): "))
+    print(month_to_season(n_montn))
 except ValueError:
     print("Пожалуйста, введите целое число от 1 до 12.")

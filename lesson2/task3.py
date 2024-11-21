@@ -1,8 +1,9 @@
-import
+from math import ceil
+a = float(input("Сторона: "))
+def square(a):
+    formula = a * a
+    return formula
 
-def square(side):
-    return math.ceil(side*side)
 
-square = int(input("сторона: "))
-
-
+rounded = ceil(square(a))
+print("Площадь квадрата: " + str(rounded))
