@@ -12,8 +12,3 @@ def fizz_buzz(n):
 
 
 print(f"{n} - fizz_buzz")
-
-
-
-
-
