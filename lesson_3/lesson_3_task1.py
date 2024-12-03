@@ -1,6 +1,8 @@
-from user import Users
-my_user = Users("ivan","ivanov")
+from User import User
 
-print(my_user.get_neme())
-print(my_user.get_last_neme())
-print(my_user.get_full_neme())
+
+my_user = User("Ivan", "Ivanov")
+
+my_user.say_neme()
+my_user.say_last_neme()
+my_user.say_full_neme()
