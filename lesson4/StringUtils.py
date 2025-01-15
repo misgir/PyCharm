@@ -88,12 +88,13 @@ def test_end_with_n():
     assert stringUtils.end_with('.', '') == False
 
 
-def test_is_empty():
+def test_is_empty_p():
     # позитивные проверки
     assert stringUtils.is_empty("") == True
     assert stringUtils.is_empty(" ") == True
     assert stringUtils.is_empty("Hello") == False
     assert stringUtils.is_empty("123") == False
+def test_is_empty_n():
     #  негативные проверки
     assert stringUtils.is_empty("123") == True
     assert stringUtils.is_empty(" ") == False
