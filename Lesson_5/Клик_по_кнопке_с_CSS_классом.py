@@ -11,3 +11,5 @@ driver.get("http://uitestingplayground.com/classattr")
 add_element_button_locator = ".btn-primary"
 blue_button = driver.find_element(By.CSS_SELECTOR,add_element_button_locator)
 blue_button.click()
+
+driver.quit()

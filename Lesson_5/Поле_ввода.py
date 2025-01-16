@@ -19,3 +19,5 @@ sleep(2)
 input_btn.clear()
 sleep(2)
 input_btn.send_keys("999")
+
+driver.quit()

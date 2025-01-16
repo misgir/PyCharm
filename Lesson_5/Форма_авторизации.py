@@ -23,3 +23,5 @@ sleep(2)
 WebDriverWait(driver, 10).until(
     EC.visibility_of_element_located((By.CSS_SELECTOR, "button[type='submit']"))
 ).click()
+
+driver.quit()

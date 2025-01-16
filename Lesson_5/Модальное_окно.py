@@ -21,3 +21,5 @@ WebDriverWait(driver, 10).until(
 close_btn = driver.find_element(By.CSS_SELECTOR, "div.modal-footer p")
 ActionChains(driver).move_to_element(close_btn).perform()
 close_btn.click()
+
+driver.quit()

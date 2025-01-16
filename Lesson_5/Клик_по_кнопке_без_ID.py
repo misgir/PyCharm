@@ -12,3 +12,4 @@ add_element_button_locator = "button.btn.btn-primary"
 blue_button = driver.find_element(By.CSS_SELECTOR,add_element_button_locator)
 blue_button.click()
 
+driver.quit()
