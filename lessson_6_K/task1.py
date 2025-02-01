@@ -70,7 +70,3 @@ def test_fields_color() -> None:
         == Color.from_string(company.value_of_css_property("color")).hex
         == green_color
     )
-
-
-if __name__ == "__main__":
-    test_fields_color()

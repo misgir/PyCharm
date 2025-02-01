@@ -1,4 +1,5 @@
 from selenium import webdriver
+from time import sleep
 from selenium.webdriver import Chrome
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -32,6 +33,7 @@ def test_sum_success():
     num5.click()
 
     text = "#calculator > div.top > div"
+    sleep(46)
 
     sum = browser.find_element(By.CSS_SELECTOR, text)
 
