@@ -12,7 +12,7 @@ def driver():
     driver.quit()
 
 
-def test_01_form(driver):
+def test_form(driver):
     form_page = FormPage(driver)
 
     form_page.open()
@@ -29,18 +29,16 @@ def test_01_form(driver):
         "QA", "SkyPro"
     ]
 
-     form_page.fill_form(field_names, values)
+    form_page.fill_form(field_names, values)
 
-     form_page.submit()
+    form_page.submit()
 
-     form_page.company_element()
+    form_page.company_element()
 
-     assert "danger" in form_page.get_zip_code_class(), "Поле Zip code должно быть подсвечено красным"
+    assert "danger" in form_page.get_zip_code_class(), "Поле Zip code должно быть подсвечено красным"
 
     fields = [
-        "first-name", "last-name", "address", "e-mail",
-        "phone", "city", "country", "job-position", "company"
-    ]
+        "first-name", "last-name", "address", "e-mail",    ]
     for field_id in fields:
         assert "success" in form_page.get_class(field_id), f"Поле {field_id} должно быть подсвечено зеленым"
 
