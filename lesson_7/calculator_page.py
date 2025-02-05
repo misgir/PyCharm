@@ -29,4 +29,4 @@ class CalculatorPage(BasePage):
     def wait_for_result(self, expected_result):
          WebDriverWait(self._driver, 50).until(
             EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".screen"), expected_result)
-        )
+         )
