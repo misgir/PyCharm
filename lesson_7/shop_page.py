@@ -23,11 +23,11 @@ class ShopPage(BasePage):
 
         self._driver.find_element(By.CSS_SELECTOR, '#login-button').click()
 
-    def add_cart(self, item_ids):
+    def add_to_cart(self, item_ids):
         for item_id in item_ids:
             self._driver.find_element(By.CSS_SELECTOR, f'#add-to-cart-{item_id}').click()
 
-    def go_to_cart(self):
+    def cart(self):
         self._driver.find_element(By.CSS_SELECTOR, 'a.shopping_cart_link').click()
 
     def checkout(self, first_name, last_name, postal_code):
@@ -40,4 +40,4 @@ class ShopPage(BasePage):
         self._driver.find_element(By.CSS_SELECTOR, '#continue').click()
 
     def get_total(self):
-        return self._driver.find_element(By.CSS_SELECTOR, 'div.summary_total_lab')
+        return self._driver.find_element(By.CSS_SELECTOR, 'div.summary_total_label').text

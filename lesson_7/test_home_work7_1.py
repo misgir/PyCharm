@@ -42,4 +42,5 @@ def test_form(driver):
     for field_id in fields:
         assert "success" in form_page.get_class(field_id), f"Поле {field_id} должно быть подсвечено зеленым"
 
+
     print("well done")

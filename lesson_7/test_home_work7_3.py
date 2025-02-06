@@ -5,14 +5,14 @@ from webdriver_manager.chrome import ChromeDriverManager
 from shop_page import ShopPage
 
 
-@pytest.fixture
+@pytest.fixture()
 def driver():
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
     yield driver
     driver.quit()
 
 
-def test_shop(driver):
+def test_purchase_total(driver):
     shop_page = ShopPage(driver)
 
     shop_page.open()
@@ -24,14 +24,14 @@ def test_shop(driver):
         'sauce-labs-bolt-t-shirt',
         'sauce-labs-onesie'
     ]
-    shop_page.add_cart(items_to_add)
+    shop_page.add_to_cart(items_to_add)
 
-    shop_page.go_to_cart()
-    shop_page.checkout('alina', 'ivanovna', '111222')
+    shop_page.cart()
+    shop_page.checkout('alina', 'ivanovna', '123444')
 
     total = shop_page.get_total()
     print(total)
 
-    assert total == 'Total: $58.29', f"'{total}'"
+    assert total == 'Total: $58.29', f"''{total}'"
 
-    print("well done")
+    print("well done!")
