@@ -20,7 +20,7 @@ class CalculatorPage(BasePage):
         delay_input.send_keys(delay)
 
     def button(self, button_text):
-        button = self._driver.find_element(By.XPATH, f"//spantext()='{button_text}']")
+        button = self._driver.find_element(By.XPATH, f'//span[text()="{button_text}"]')
         button.click()
 
     def result(self):
