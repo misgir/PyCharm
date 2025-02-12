@@ -1,3 +1,4 @@
+import allure
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -12,6 +13,10 @@ def driver():
     driver.quit()
 
 
+@allure.feature('ДЗ 7')
+@allure.title('Автотест на заполнение формы')
+@allure.description('Заполнение формы значениями и проверка цвета поля')
+@allure.severity(allure.severity_level.CRITICAL)
 def test_form(driver):
     form_page = FormPage(driver)
 

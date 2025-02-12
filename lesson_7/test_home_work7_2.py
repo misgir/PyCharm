@@ -1,3 +1,4 @@
+import allure
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -11,7 +12,10 @@ def driver():
     yield driver
     driver.quit()
 
-
+@allure.feature('ДЗ 7')
+@allure.title('Автотест с проверкой работы калькулятора')
+@allure.description('Ввод цифр и ожидание результата')
+@allure.severity(allure.severity_level.NORMAL)
 def test_calculator(driver):
     calculator_page = CalculatorPage(driver)
 
